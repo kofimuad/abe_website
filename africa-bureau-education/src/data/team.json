@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Frederick Agyemang",
+    "role": "Executive Director & Lead Researcher",
+    "bio": "Frederick leads the Africa Bureau of Education with expertise in education policy and curriculum development. He is the principal investigator of the CCSP research.",
+    "initials": "FA"
+  },
+  {
+    "name": "Benedicta Woode",
+    "role": "Project Manager",
+    "bio": "Benedicta oversees implementation of CCSP across institutions and manages stakeholder coordination.",
+    "initials": "BW"
+  },
+  {
+    "name": "Samuel Kofi Fosuhene",
+    "role": "Curriculum Specialist",
+    "bio": "Samuel specializes in curriculum design and educational standards with focus on career-aligned learning.",
+    "initials": "SK"
+  },
+  {
+    "name": "Nana Ama Browne Klutse",
+    "role": "Research Advisor",
+    "bio": "Nana provides oversight on research methodologies and ensures academic rigor of all publications.",
+    "initials": "NK"
+  },
+  {
+    "name": "Alexander Kojo Nyarko",
+    "role": "Education Policy Advisor",
+    "bio": "Alexander advises on policy integration and works with government agencies on CCSP adoption.",
+    "initials": "AN"
+  },
+  {
+    "name": "Seth Oku Asamoah",
+    "role": "Training & Development Lead",
+    "bio": "Seth develops and delivers teacher training programs for CCSP implementation.",
+    "initials": "SO"
+  }
+]

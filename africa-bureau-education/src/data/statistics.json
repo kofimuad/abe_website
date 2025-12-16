@@ -1,0 +1,32 @@
+{
+  "education": {
+    "humanCapitalWaste": 56,
+    "hciRanking": "116/157",
+    "yearsFacultyLearning": 6,
+    "yearsAttendance": 12,
+    "capacityLearning": 50,
+    "shs1Students": 400612,
+    "shs2Students": 426219,
+    "shs3Students": 354126,
+    "totalSHSStudents": 1180957,
+    "annualGraduates": 350000
+  },
+  "ccsp": {
+    "mainCoursesOriginal": 7,
+    "majorCoursesNew": 18,
+    "careerPathsPerCourse": "20-40",
+    "totalCareerPaths": 700
+  },
+  "worldBank": {
+    "hciDescription": "Human Capital Index measures capital a child can expect to attain by age 18",
+    "ghanScore": 307,
+    "averageLMI": 391,
+    "lowestRankedCountries": [
+      { "country": "Niger", "score": 305 },
+      { "country": "Ghana", "score": 307 },
+      { "country": "Mali", "score": 307 },
+      { "country": "Sierra Leone", "score": 316 },
+      { "country": "DRC", "score": 318 }
+    ]
+  }
+}

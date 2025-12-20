@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 export default function Hero() {
   return (
@@ -55,20 +56,21 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Image */}
+          {/* Right - Brand Mark */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="hidden md:flex justify-center"
+            className="hidden md:flex justify-center items-center"
           >
             <div className="relative">
-              <div className="w-full aspect-square bg-primary-900 rounded-2xl flex items-center justify-center">
-                <BookOpen size={200} className="text-primary-700 opacity-50" />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-primary-500 text-white px-6 py-3 rounded-lg font-bold">
-                Education for All
-              </div>
+              {/* Logo with shadow/glow effect */}
+              <div className="absolute inset-0 bg-primary-500 rounded-3xl filter blur-2xl opacity-20"></div>
+              <img
+                src={logo}
+                alt="Africa Bureau of Education - Brand Mark"
+                className="relative h-80 w-80 object-contain drop-shadow-2xl"
+              />
             </div>
           </motion.div>
         </div>

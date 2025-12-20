@@ -3,6 +3,14 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 
+// Blog post icons - using Openmoji SVGs
+const blogIcons = {
+  'Education': 'https://cdn.jsdelivr.net/npm/openmoji@latest/color/svg/1F4DA.svg',
+  'CCSP': 'https://cdn.jsdelivr.net/npm/openmoji@latest/color/svg/1F3AF.svg',
+  'Implementation': 'https://cdn.jsdelivr.net/npm/openmoji@latest/color/svg/1F4DD.svg',
+  'Research': 'https://cdn.jsdelivr.net/npm/openmoji@latest/color/svg/1F52C.svg',
+};
+
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -14,7 +22,6 @@ export default function Blog() {
       category: 'Education',
       date: '2025-01-15',
       author: 'Frederick Agyemang',
-      image: '📊',
       content: 'Full article content here...',
     },
     {
@@ -24,7 +31,6 @@ export default function Blog() {
       category: 'CCSP',
       date: '2025-01-10',
       author: 'Benedicta Woode',
-      image: '🎯',
       content: 'Full article content here...',
     },
     {
@@ -34,7 +40,6 @@ export default function Blog() {
       category: 'Implementation',
       date: '2025-01-05',
       author: 'Samuel Kofi Fosuhene',
-      image: '✅',
       content: 'Full article content here...',
     },
     {
@@ -44,7 +49,6 @@ export default function Blog() {
       category: 'Education',
       date: '2024-12-28',
       author: 'Alexander Kojo Nyarko',
-      image: '🌍',
       content: 'Full article content here...',
     },
   ];
@@ -107,9 +111,14 @@ export default function Blog() {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
                 >
-                  {/* Image */}
-                  <div className="h-48 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-6xl">
-                    {post.image}
+                  {/* Image - Icon SVG */}
+                  <div className="h-48 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center p-8">
+                    <img
+                      src={blogIcons[post.category] || blogIcons['Education']}
+                      alt={post.category}
+                      className="w-24 h-24 object-contain"
+                      loading="lazy"
+                    />
                   </div>
 
                   {/* Content */}

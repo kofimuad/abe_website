@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import logo from '../assets/logo.png';
+const logo = new URL('../assets/logo.png', import.meta.url).href;
 
 export default function Hero() {
   return (

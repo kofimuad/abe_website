@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -15,6 +15,45 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import './index.css';
 
+// Scroll to top component - MUST be inside Router
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+// Main App Content - inside Router
+function AppContent({ darkMode, toggleDarkMode }) {
+  return (
+    <>
+      <ScrollToTop />
+      <div className="min-h-screen flex flex-col">
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/ccsp" element={<CCSP />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/courses/:courseId" element={<CoursePage />} />
+            <Route path="/research" element={<Research />} />
+            <Route path="/implementation" element={<Implementation />} />
+            <Route path="/impact" element={<Impact />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+}
+
+// Main App - manages dark mode
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -44,24 +83,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen flex flex-col">
-          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/ccsp" element={<CCSP />} />
-              <Route path="/courses" element={<Courses />} />
-              <Route path="/courses/:courseId" element={<CoursePage />} />
-              <Route path="/research" element={<Research />} />
-              <Route path="/implementation" element={<Implementation />} />
-              <Route path="/impact" element={<Impact />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <AppContent darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </Router>
     </HelmetProvider>
   );

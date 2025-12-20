@@ -43,10 +43,10 @@ export default function Implementation() {
 
       <div className="min-h-screen">
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+        <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-5xl font-bold mb-4">Implementation Resources</h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-gray-300">
               Tools and guides for CCSP adoption in your institution
             </p>
           </div>
@@ -67,14 +67,14 @@ export default function Implementation() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-blue-600"
+                    className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-primary-600"
                   >
-                    <IconComponent className="w-12 h-12 text-blue-600 mb-4" />
+                    <IconComponent className="w-12 h-12 text-primary-600 mb-4" />
                     <h3 className="text-xl font-bold mb-4">{rec.title}</h3>
                     <ul className="space-y-3">
                       {rec.points.map((point, i) => (
                         <li key={i} className="flex items-start gap-2 text-gray-700">
-                          <span className="text-blue-600 font-bold mt-1">✓</span>
+                          <span className="text-primary-600 font-bold mt-1">✓</span>
                           <span>{point}</span>
                         </li>
                       ))}
@@ -127,7 +127,7 @@ export default function Implementation() {
                     <h3 className="text-xl font-bold mb-2">{resource.title}</h3>
                     <p className="text-gray-600 mb-4">{resource.desc}</p>
                   </div>
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition inline-flex items-center gap-2 w-fit">
+                  <button className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-semibold transition inline-flex items-center gap-2 w-fit">
                     <Download size={18} /> Download
                   </button>
                 </motion.div>

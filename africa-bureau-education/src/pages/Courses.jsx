@@ -11,10 +11,10 @@ export default function Courses() {
       </Helmet>
 
       <div className="min-h-screen">
-        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
+        <section className="bg-secondary-900 text-white py-16">
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-5xl font-bold mb-4">Explore Our Courses</h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-gray-300">
               Discover 18 major courses designed to match your interests and career aspirations
             </p>
           </div>

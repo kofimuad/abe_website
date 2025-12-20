@@ -33,10 +33,10 @@ export default function Contact() {
 
       <div className="min-h-screen">
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+        <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-5xl font-bold mb-4">Get in Touch</h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-gray-300">
               We'd love to hear from you. Let's talk about education reform.
             </p>
           </div>
@@ -58,27 +58,27 @@ export default function Contact() {
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <Mail className="text-blue-600 flex-shrink-0 mt-1" size={24} />
+                    <Mail className="text-primary-600 flex-shrink-0 mt-1" size={24} />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <a href="mailto:info@abe.org" className="text-blue-600 hover:underline">
+                      <a href="mailto:info@abe.org" className="text-primary-600 hover:underline">
                         info@abe.org
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Phone className="text-blue-600 flex-shrink-0 mt-1" size={24} />
+                    <Phone className="text-primary-600 flex-shrink-0 mt-1" size={24} />
                     <div>
                       <p className="font-semibold">Phone</p>
-                      <a href="tel:+233XXX" className="text-blue-600 hover:underline">
+                      <a href="tel:+233XXX" className="text-primary-600 hover:underline">
                         +233 (XXX) XXX-XXXX
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <MapPin className="text-blue-600 flex-shrink-0 mt-1" size={24} />
+                    <MapPin className="text-primary-600 flex-shrink-0 mt-1" size={24} />
                     <div>
                       <p className="font-semibold">Office</p>
                       <p className="text-gray-600">Accra, Ghana</p>
@@ -106,58 +106,53 @@ export default function Contact() {
                 <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-8 rounded-lg shadow-lg">
                   <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
 
-                  {/* Name Field */}
                   <div className="mb-6">
                     <label className="block text-gray-700 font-semibold mb-2">Full Name</label>
                     <input
                       type="text"
                       {...register('name')}
-                      className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition"
+                      className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary-600 focus:outline-none transition"
                       placeholder="Your Name"
                     />
                     {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>}
                   </div>
 
-                  {/* Email Field */}
                   <div className="mb-6">
                     <label className="block text-gray-700 font-semibold mb-2">Email Address</label>
                     <input
                       type="email"
                       {...register('email')}
-                      className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition"
+                      className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary-600 focus:outline-none transition"
                       placeholder="your@email.com"
                     />
                     {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>}
                   </div>
 
-                  {/* Subject Field */}
                   <div className="mb-6">
                     <label className="block text-gray-700 font-semibold mb-2">Subject</label>
                     <input
                       type="text"
                       {...register('subject')}
-                      className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition"
+                      className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary-600 focus:outline-none transition"
                       placeholder="What is this about?"
                     />
                     {errors.subject && <p className="text-red-600 text-sm mt-1">{errors.subject.message}</p>}
                   </div>
 
-                  {/* Message Field */}
                   <div className="mb-6">
                     <label className="block text-gray-700 font-semibold mb-2">Message</label>
                     <textarea
                       {...register('message')}
                       rows="5"
-                      className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition resize-none"
+                      className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary-600 focus:outline-none transition resize-none"
                       placeholder="Your message..."
                     ></textarea>
                     {errors.message && <p className="text-red-600 text-sm mt-1">{errors.message.message}</p>}
                   </div>
 
-                  {/* Submit Button */}
                   <button
                     type="submit"
-                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition inline-flex items-center gap-2 w-full justify-center"
+                    className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-bold transition inline-flex items-center gap-2 w-full justify-center"
                   >
                     <Send size={20} /> Send Message
                   </button>

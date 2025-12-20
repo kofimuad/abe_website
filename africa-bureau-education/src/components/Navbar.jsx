@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
+import logo from '../assets/logo.png';
 
-export default function Navbar() {
+export default function Navbar({ darkMode, toggleDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -17,49 +18,60 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-blue-900 to-blue-800 text-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-secondary-900 text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 font-bold text-xl">
+          <Link to="/" className="flex items-center gap-2 font-bold text-xl hover:opacity-80 transition">
             <img
-              src="../src/assets/logo.png"
+              src={logo}
               alt="Africa Bureau of Education logo"
-              className="h-8 w-auto object-contain"
+              className="h-10 w-auto object-contain"
             />
-            <span className="sr-only">Africa Bureau of Education</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-1">
+          <div className="hidden md:flex gap-1 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className="px-3 py-2 rounded hover:bg-blue-700 transition text-white"
+                className="px-3 py-2 rounded hover:bg-secondary-800 hover:text-primary-400 transition text-white"
               >
                 {link.name}
               </Link>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Right Side - Dark Mode Toggle & Mobile Menu Button */}
+          <div className="flex items-center gap-4">
+            {/* Dark Mode Toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-lg hover:bg-secondary-800 text-primary-400 transition"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-primary-400 hover:text-primary-300 transition"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2">
+          <div className="md:hidden pb-4 space-y-2 border-t border-secondary-800">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className="block px-3 py-2 rounded hover:bg-blue-700 transition text-white"
+                className="block px-3 py-2 rounded hover:bg-secondary-800 hover:text-primary-400 transition text-white"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

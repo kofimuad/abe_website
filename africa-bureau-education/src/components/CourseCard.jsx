@@ -1,3 +1,6 @@
+// ============================================
+// src/components/CourseCard.jsx
+// ============================================
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -31,21 +34,21 @@ export default function CourseCard({ course, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition p-6 border-t-4 border-blue-600"
+      className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition p-6 border-t-4 border-primary-600"
     >
       <div className="text-5xl mb-4">{courseIcons[course.name] || '📖'}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-2">{course.name}</h3>
       <p className="text-gray-600 text-sm mb-4">{course.abstract}</p>
 
       <div className="mb-4">
-        <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
+        <span className="text-xs font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
           {course.careers.length} Career Paths
         </span>
       </div>
 
       <Link
         to={`/courses/${course.code}`}
-        className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition"
+        className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition"
       >
         Explore Course <ArrowRight size={18} />
       </Link>

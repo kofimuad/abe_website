@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
@@ -14,14 +14,38 @@ import Impact from './pages/Impact';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import './index.css';
-import './styles/globals.css'
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Initialize dark mode from localStorage or system preference
+  useEffect(() => {
+    const saved = localStorage.getItem('darkMode');
+    const isDark = saved ? saved === 'true' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(isDark);
+    updateDarkMode(isDark);
+  }, []);
+
+  const updateDarkMode = (isDark) => {
+    if (isDark) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+    localStorage.setItem('darkMode', isDark);
+  };
+
+  const toggleDarkMode = () => {
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    updateDarkMode(newDarkMode);
+  };
+
   return (
     <HelmetProvider>
       <Router>
         <div className="min-h-screen flex flex-col">
-          <Navbar />
+          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />

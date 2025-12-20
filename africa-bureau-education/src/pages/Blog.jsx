@@ -64,10 +64,10 @@ export default function Blog() {
 
       <div className="min-h-screen">
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+        <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-5xl font-bold mb-4">Blog & Insights</h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-gray-300">
               Latest articles on education reform and CCSP implementation
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function Blog() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg font-semibold transition ${
                     selectedCategory === category
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-primary-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-200 border-2 border-gray-300'
                   }`}
                 >
@@ -108,14 +108,14 @@ export default function Blog() {
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
                 >
                   {/* Image */}
-                  <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-6xl">
+                  <div className="h-48 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-6xl">
                     {post.image}
                   </div>
 
                   {/* Content */}
                   <div className="p-6">
                     <div className="flex gap-4 mb-3 flex-wrap">
-                      <span className="text-xs font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
+                      <span className="text-xs font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
                         {post.category}
                       </span>
                       <span className="text-xs text-gray-500 flex items-center gap-1">
@@ -130,7 +130,7 @@ export default function Blog() {
                       <span className="text-sm text-gray-500 flex items-center gap-1">
                         <User size={14} /> {post.author}
                       </span>
-                      <a href="#" className="text-blue-600 font-semibold hover:text-blue-800 transition flex items-center gap-1">
+                      <a href="#" className="text-primary-600 font-semibold hover:text-primary-700 transition flex items-center gap-1">
                         Read More <ArrowRight size={16} />
                       </a>
                     </div>

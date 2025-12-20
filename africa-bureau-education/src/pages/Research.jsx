@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Download, BookOpen, Users } from 'lucide-react';
+import { Download, BookOpen } from 'lucide-react';
 
 export default function Research() {
   return (
@@ -13,10 +13,10 @@ export default function Research() {
 
       <div className="min-h-screen">
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+        <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <h1 className="text-5xl font-bold mb-4">Research & Publications</h1>
-            <p className="text-xl text-blue-100 max-w-2xl">
+            <h1 className="text-5xl font-bold mb-4 text-white">Research & Publications</h1>
+            <p className="text-xl text-gray-300 max-w-2xl">
               Evidence-based research driving education reform in Africa
             </p>
           </div>
@@ -35,10 +35,10 @@ export default function Research() {
               <div className="grid md:grid-cols-3 gap-8 p-8">
                 {/* Paper Preview */}
                 <div className="md:col-span-1 flex justify-center">
-                  <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-6 rounded-lg h-fit">
+                  <div className="bg-gradient-to-br from-primary-600 to-primary-800 text-white p-6 rounded-lg h-fit">
                     <BookOpen size={48} className="mb-4" />
                     <p className="text-sm font-bold">RESEARCH PAPER</p>
-                    <p className="text-xs text-blue-100 mt-2">F1000Research 2025</p>
+                    <p className="text-xs text-gray-200 mt-2">F1000Research 2025</p>
                   </div>
                 </div>
 
@@ -70,12 +70,12 @@ export default function Research() {
                   </div>
 
                   <p className="text-gray-700 mb-6 leading-relaxed">
-                    This comprehensive study analyzes education gaps in Ghana's system and proposes the Common Career Selective Programme (CCSP) as a solution to align education with lifelong learning and employability. The research presents a modification of 7 main courses into 18 major courses with detailed career pathways.
+                    This comprehensive study analyzes education gaps in Ghana's system and proposes the Common Career Selective Programme (CCSP) as a solution to align education with lifelong learning and employability.
                   </p>
 
                   <a
                     href="#"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition"
+                    className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition"
                   >
                     <Download size={20} /> Download PDF
                   </a>
@@ -113,44 +113,8 @@ export default function Research() {
                   viewport={{ once: true }}
                   className="bg-white p-6 rounded-lg shadow-lg text-center"
                 >
-                  <div className="text-4xl font-bold text-blue-600 mb-3">{item.stat}</div>
+                  <div className="text-4xl font-bold text-primary-600 mb-3">{item.stat}</div>
                   <p className="text-gray-700">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Methodology */}
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-8">Research Methodology</h2>
-
-            <div className="space-y-6">
-              {[
-                { step: 1, title: 'Data Collection', desc: 'Analyzed Ghana Education Service 2021 Second-Cycle School Register and Ghana Senior High Schools Annual Digest 2019/2020' },
-                { step: 2, title: 'Content Analysis', desc: 'Systematic review of education policies and curriculum frameworks' },
-                { step: 3, title: 'Course Modification', desc: 'Expanded 7 main courses to 18 major courses with career mappings' },
-                { step: 4, title: 'Stakeholder Consultation', desc: 'Engaged education leaders, policymakers, and industry experts' },
-                { step: 5, title: 'Peer Review', desc: 'Submitted to F1000Research for independent academic validation' },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex gap-4"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-600 text-white font-bold">
-                      {item.step}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-gray-600">{item.desc}</p>
-                  </div>
                 </motion.div>
               ))}
             </div>

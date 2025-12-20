@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { motion } from 'framer-motion';
 
 export default function Impact() {
@@ -22,10 +22,10 @@ export default function Impact() {
 
       <div className="min-h-screen">
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+        <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-5xl font-bold mb-4">Impact & Evidence</h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-gray-300">
               Measuring the effectiveness of education reform
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function Impact() {
                   <YAxis yAxisId="left" label={{ value: 'Quality Score', angle: -90, position: 'insideLeft' }} />
                   <Tooltip />
                   <Legend />
-                  <Line yAxisId="left" type="monotone" dataKey="quality" stroke="#2563eb" strokeWidth={2} name="Education Quality (%)" />
+                  <Line yAxisId="left" type="monotone" dataKey="quality" stroke="#22c55e" strokeWidth={2} name="Education Quality (%)" />
                 </LineChart>
               </ResponsiveContainer>
             </motion.div>
@@ -68,7 +68,7 @@ export default function Impact() {
                   name: 'Ama Owusu',
                   role: 'Student, Accra Senior High School',
                   quote: 'The expanded course options helped me discover my passion for healthcare. Now I\'m on track for medical school.',
-                  bg: 'bg-blue-50',
+                  bg: 'bg-primary-50',
                 },
                 {
                   name: 'Dr. Kwame Mensah',
@@ -83,7 +83,7 @@ export default function Impact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                  className={`${story.bg} p-8 rounded-lg border-l-4 border-blue-600`}
+                  className={`${story.bg} p-8 rounded-lg border-l-4 border-primary-600`}
                 >
                   <p className="text-lg italic mb-4 text-gray-700">"{story.quote}"</p>
                   <div>

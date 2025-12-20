@@ -48,7 +48,7 @@ export default function CourseExplorer() {
         <input
           type="text"
           placeholder="Search courses..."
-          className="w-full pl-10 pr-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none"
+          className="w-full pl-10 pr-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary-600 focus:outline-none"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -62,7 +62,7 @@ export default function CourseExplorer() {
             onClick={() => setSelectedCategory(category)}
             className={`px-4 py-2 rounded-lg font-semibold transition ${
               selectedCategory === category
-                ? 'bg-blue-600 text-white'
+                ? 'bg-primary-600 text-white'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >

@@ -14,7 +14,7 @@ export default function CoursePage() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Course Not Found</h1>
-          <Link to="/courses" className="text-blue-600 hover:underline">
+          <Link to="/courses" className="text-primary-600 hover:underline">
             Back to Courses
           </Link>
         </div>
@@ -31,13 +31,13 @@ export default function CoursePage() {
 
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-12">
+        <section className="bg-secondary-900 text-white py-12">
           <div className="max-w-7xl mx-auto px-4">
             <Link to="/courses" className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
               <ArrowLeft size={20} /> Back to Courses
             </Link>
             <h1 className="text-5xl font-bold mb-2">{course.name}</h1>
-            <p className="text-xl text-blue-100">{course.abstract}</p>
+            <p className="text-xl text-gray-300">{course.abstract}</p>
           </div>
         </section>
 
@@ -59,24 +59,24 @@ export default function CoursePage() {
                   <h3 className="text-2xl font-bold mb-4">Course Components</h3>
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-600 font-bold">•</span>
-                      <span>Core Subjects aligned with {course.name}</span>
+                      <span className="text-primary-600 font-bold">•</span>
+                      <span className="text-gray-700">Core Subjects aligned with {course.name}</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-600 font-bold">•</span>
-                      <span>Selective Subjects for specialization</span>
+                      <span className="text-primary-600 font-bold">•</span>
+                      <span className="text-gray-700">Selective Subjects for specialization</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-600 font-bold">•</span>
-                      <span>Elective Subjects for broader learning</span>
+                      <span className="text-primary-600 font-bold">•</span>
+                      <span className="text-gray-700">Elective Subjects for broader learning</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-600 font-bold">•</span>
-                      <span>Practical training and internships</span>
+                      <span className="text-primary-600 font-bold">•</span>
+                      <span className="text-gray-700">Practical training and internships</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-600 font-bold">•</span>
-                      <span>Project-Based Learning activities</span>
+                      <span className="text-primary-600 font-bold">•</span>
+                      <span className="text-gray-700">Project-Based Learning activities</span>
                     </li>
                   </ul>
                 </motion.div>
@@ -89,7 +89,7 @@ export default function CoursePage() {
                   className="bg-white rounded-lg shadow-lg p-8"
                 >
                   <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-                    <Briefcase size={28} className="text-blue-600" />
+                    <Briefcase size={28} className="text-primary-600" />
                     Career Options
                   </h2>
 
@@ -100,14 +100,14 @@ export default function CoursePage() {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3, delay: index * 0.05 }}
-                        className="bg-blue-50 p-4 rounded border-l-4 border-blue-600"
+                        className="bg-primary-50 p-4 rounded border-l-4 border-primary-600"
                       >
                         <p className="font-semibold text-gray-900">{career}</p>
                       </motion.div>
                     ))}
                   </div>
 
-                  <div className="mt-6 p-4 bg-blue-100 rounded-lg">
+                  <div className="mt-6 p-4 bg-primary-100 rounded-lg">
                     <p className="text-sm text-gray-700">
                       <strong>Career Requirements:</strong> {course.careerRequirements}
                     </p>
@@ -138,14 +138,14 @@ export default function CoursePage() {
 
                     <div className="border-b pb-4">
                       <p className="text-sm text-gray-600 mb-1">Career Paths</p>
-                      <p className="font-bold text-2xl text-blue-600">{course.careers.length}+</p>
+                      <p className="font-bold text-2xl text-primary-600">{course.careers.length}+</p>
                     </div>
 
                     <div>
                       <p className="text-sm text-gray-600 mb-2">Next Steps</p>
                       <Link
                         to="/contact"
-                        className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition text-center block"
+                        className="w-full bg-primary-600 hover:bg-primary-700 text-white py-2 rounded-lg font-semibold text-center block transition"
                       >
                         Learn More
                       </Link>

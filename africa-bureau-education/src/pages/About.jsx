@@ -13,10 +13,10 @@ export default function About() {
 
       <div className="min-h-screen">
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+        <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-5xl font-bold mb-4">About Us</h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-gray-300">
               Transforming education in Africa through innovative, career-focused curricula
             </p>
           </div>
@@ -57,12 +57,12 @@ export default function About() {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-lg overflow-hidden"
                 >
-                  <div className="h-64 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-4xl">
+                  <div className="h-64 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-4xl">
                     {member.initials}
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                    <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
+                    <p className="text-primary-600 font-semibold mb-3">{member.role}</p>
                     <p className="text-gray-600 text-sm">{member.bio}</p>
                   </div>
                 </motion.div>
@@ -91,8 +91,8 @@ export default function About() {
                   viewport={{ once: true }}
                   className="flex gap-6 items-start"
                 >
-                  <div className="w-32 font-bold text-blue-600 text-lg">{item.year}</div>
-                  <div className="flex-1 pb-6 border-l-2 border-blue-600 pl-6">
+                  <div className="w-32 font-bold text-primary-600 text-lg">{item.year}</div>
+                  <div className="flex-1 pb-6 border-l-2 border-primary-600 pl-6">
                     <h3 className="text-xl font-bold mb-1">{item.title}</h3>
                     <p className="text-gray-600">{item.desc}</p>
                   </div>

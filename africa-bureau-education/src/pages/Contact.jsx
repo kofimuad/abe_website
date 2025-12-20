@@ -35,7 +35,7 @@ export default function Contact() {
         {/* Header */}
         <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <h1 className="text-5xl font-bold mb-4">Get in Touch</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white">Get in Touch</h1>
             <p className="text-xl text-gray-300">
               We'd love to hear from you. Let's talk about education reform.
             </p>
@@ -61,8 +61,8 @@ export default function Contact() {
                     <Mail className="text-primary-600 flex-shrink-0 mt-1" size={24} />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <a href="mailto:info@abe.org" className="text-primary-600 hover:underline">
-                        info@abe.org
+                      <a href="mailto:afrbureauedu@gmail.com" className="text-primary-600 hover:underline">
+                        afrbureauedu@gmail.com
                       </a>
                     </div>
                   </div>
@@ -71,8 +71,8 @@ export default function Contact() {
                     <Phone className="text-primary-600 flex-shrink-0 mt-1" size={24} />
                     <div>
                       <p className="font-semibold">Phone</p>
-                      <a href="tel:+233XXX" className="text-primary-600 hover:underline">
-                        +233 (XXX) XXX-XXXX
+                      <a href="tel:+233201465422" className="text-primary-600 hover:underline">
+                        +233 (201) 465-422
                       </a>
                     </div>
                   </div>
@@ -104,7 +104,7 @@ export default function Contact() {
                 className="md:col-span-2"
               >
                 <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-8 rounded-lg shadow-lg">
-                  <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+                  <h2 className="text-2xl font-bold mb-6 dark:text-black">Send us a Message</h2>
 
                   <div className="mb-6">
                     <label className="block text-gray-700 font-semibold mb-2">Full Name</label>

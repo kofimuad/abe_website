@@ -46,7 +46,7 @@ export default function CCSP() {
         {/* Header */}
         <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <h1 className="text-5xl font-bold mb-4">Common Career Selective Programme</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white">Common Career Selective Programme</h1>
             <p className="text-xl text-gray-300 max-w-2xl">
               A structured education framework designed to expand course options, align learning with careers, and improve quality of education for all students.
             </p>
@@ -88,19 +88,19 @@ export default function CCSP() {
                 viewport={{ once: true }}
                 className="grid grid-cols-2 gap-4"
               >
-                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-primary-600">
+                <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-primary-600">
                   <div className="text-4xl font-bold text-primary-600 mb-2">7→18</div>
                   <p className="text-gray-700 font-semibold">Courses Expanded</p>
                 </div>
-                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-primary-600">
+                <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-primary-600">
                   <div className="text-4xl font-bold text-primary-600 mb-2">700+</div>
                   <p className="text-gray-700 font-semibold">Career Paths</p>
                 </div>
-                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-primary-600">
+                <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-primary-600">
                   <div className="text-4xl font-bold text-primary-600 mb-2">1.1M+</div>
                   <p className="text-gray-700 font-semibold">Students Impacted</p>
                 </div>
-                <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-primary-600">
+                <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-primary-600">
                   <div className="text-4xl font-bold text-primary-600 mb-2">EFA</div>
                   <p className="text-gray-700 font-semibold">Education for All</p>
                 </div>
@@ -110,7 +110,7 @@ export default function CCSP() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-inherit">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold mb-12 text-center">Why CCSP Matters</h2>
 
@@ -122,7 +122,7 @@ export default function CCSP() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition flex items-start gap-4"
+                  className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md hover:shadow-lg transition flex items-start gap-4"
                 >
                   <CheckCircle className="text-primary-600 flex-shrink-0 mt-1" size={24} />
                   <p className="text-gray-700 font-medium">{benefit}</p>
@@ -145,7 +145,7 @@ export default function CCSP() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary-600"
+                  className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border-l-4 border-primary-600"
                 >
                   <div className="flex items-start gap-4">
                     <div className="bg-gray-100 text-primary-600 font-bold px-4 py-2 rounded-lg min-w-fit">
@@ -162,7 +162,7 @@ export default function CCSP() {
         </section>
 
         {/* 6-Step Curriculum Process */}
-        <section className="py-20 bg-secondary-900 text-white">
+        <section className="py-20 text-white">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold mb-12 text-center">6-Step Implementation Framework</h2>
 
@@ -174,7 +174,7 @@ export default function CCSP() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-secondary-800 p-6 rounded-lg border-2 border-primary-600"
+                  className="p-6 rounded-lg border-2 border-primary-600"
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-full bg-primary-500 text-white font-bold text-lg">
@@ -182,7 +182,7 @@ export default function CCSP() {
                     </div>
                     <h3 className="text-xl font-bold">{item.title}</h3>
                   </div>
-                  <p className="text-gray-300">{item.desc}</p>
+                  <p className="text-black">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -211,7 +211,7 @@ export default function CCSP() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-primary-600"
+                  className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg border-t-4 border-primary-600"
                 >
                   <h3 className="text-2xl font-bold mb-6">{component.title}</h3>
                   <ul className="space-y-3">
@@ -229,7 +229,7 @@ export default function CCSP() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-secondary-900">
+        <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -237,21 +237,21 @@ export default function CCSP() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Education?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              <h2 className="text-4xl font-bold text-black mb-4">Ready to Transform Education?</h2>
+              <p className="text-xl text-black mb-8 max-w-2xl mx-auto">
                 Join us in implementing CCSP to provide students with career-aligned education and unlimited opportunities.
               </p>
 
               <div className="flex gap-4 flex-wrap justify-center">
                 <Link
                   to="/implementation"
-                  className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-bold transition inline-flex items-center gap-2"
+                  className="bg-primary-600 dark:text-white hover:bg-primary-700 hover:text-gray-800 text-white px-8 py-3 rounded-lg font-bold transition inline-flex items-center gap-2"
                 >
                   Implementation Resources <ArrowRight size={20} />
                 </Link>
                 <Link
                   to="/contact"
-                  className="border-2 border-white text-white hover:bg-white hover:text-secondary-900 px-8 py-3 rounded-lg font-bold transition"
+                  className="border-2 border-primary-500 text-black hover:bg-primary-600 hover:text-black px-8 py-3 rounded-lg font-bold transition"
                 >
                   Get in Touch
                 </Link>

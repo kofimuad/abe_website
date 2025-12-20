@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* About Section */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Africa Bureau of Education</h3>
+            <h3 className="font-bold text-lg mb-4 text-white">Africa Bureau of Education</h3>
             <p className="text-gray-400">
               Transforming education in Africa through innovative career-focused curricula.
             </p>
@@ -17,7 +17,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold mb-4">Quick Links</h4>
+            <h4 className="font-bold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2 text-gray-400">
               <li><Link to="/about" className="hover:text-white transition">About Us</Link></li>
               <li><Link to="/ccsp" className="hover:text-white transition">CCSP Program</Link></li>
@@ -28,7 +28,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="font-bold mb-4">Resources</h4>
+            <h4 className="font-bold mb-4 text-white">Resources</h4>
             <ul className="space-y-2 text-gray-400">
               <li><Link to="/courses" className="hover:text-white transition">Courses</Link></li>
               <li><Link to="/implementation" className="hover:text-white transition">Implementation</Link></li>
@@ -39,21 +39,21 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-bold mb-4">Contact</h4>
+            <h4 className="font-bold mb-4 text-white">Contact</h4>
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center gap-2">
                 <Mail size={18} />
-                <a href="mailto:info@abe.org" className="hover:text-white transition">
-                  info@abe.org
+                <a href="mailto:afrbureauedu@gmail.com" className="hover:text-white transition">
+                  afrbureauedu@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={18} />
-                <span>+233 (XXX) XXX-XXXX</span>
+                <span className="hover:text-white transition text-green-500">+233 (20) 146-5422</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin size={18} />
-                <span>Accra, Ghana</span>
+                <span className="hover:text-white transition text-green-500">Accra, Ghana</span>
               </div>
             </div>
           </div>

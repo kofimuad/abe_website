@@ -48,7 +48,7 @@ export default function CourseExplorer() {
         <input
           type="text"
           placeholder="Search courses..."
-          className="w-full pl-10 pr-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary-600 focus:outline-none"
+          className="w-full pl-10 pr-4 py-2 border-2 border-gray-300 rounded-lg focus:border-primary-600 focus:outline-none dark:text-black"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />

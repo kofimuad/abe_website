@@ -70,7 +70,7 @@ export default function Blog() {
         {/* Header */}
         <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <h1 className="text-5xl font-bold mb-4">Blog & Insights</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white">Blog & Insights</h1>
             <p className="text-xl text-gray-300">
               Latest articles on education reform and CCSP implementation
             </p>
@@ -78,7 +78,7 @@ export default function Blog() {
         </section>
 
         {/* Category Filter */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-gray-50 dark:bg-inherit">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex gap-2 flex-wrap justify-center">
               {categories.map((category) => (
@@ -109,7 +109,7 @@ export default function Blog() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
+                  className="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
                 >
                   {/* Image - Icon SVG */}
                   <div className="h-48 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center p-8">
@@ -124,7 +124,7 @@ export default function Blog() {
                   {/* Content */}
                   <div className="p-6">
                     <div className="flex gap-4 mb-3 flex-wrap">
-                      <span className="text-xs font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
+                      <span className="text-xs font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full dark:text-black">
                         {post.category}
                       </span>
                       <span className="text-xs text-gray-500 flex items-center gap-1">

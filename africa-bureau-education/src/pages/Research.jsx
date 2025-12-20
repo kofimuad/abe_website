@@ -32,7 +32,7 @@ export default function Research() {
               viewport={{ once: true }}
               className="bg-white rounded-lg shadow-xl overflow-hidden"
             >
-              <div className="grid md:grid-cols-3 gap-8 p-8">
+              <div className="grid md:grid-cols-3 gap-8 p-8 dark:bg-slate-800">
                 {/* Paper Preview */}
                 <div className="md:col-span-1 flex justify-center">
                   <div className="bg-gradient-to-br from-primary-600 to-primary-800 text-white p-6 rounded-lg h-fit">
@@ -63,7 +63,7 @@ export default function Research() {
 
                     <div>
                       <p className="text-sm text-gray-600">Status</p>
-                      <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                      <span className="inline-block dark:bg-blue-400 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
                         Peer Reviewed
                       </span>
                     </div>
@@ -74,8 +74,8 @@ export default function Research() {
                   </p>
 
                   <a
-                    href="#"
-                    className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition"
+                    href="src/assets/CCSP.pdf"
+                    className="inline-flex dark:text-white items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition"
                   >
                     <Download size={20} /> Download PDF
                   </a>
@@ -86,7 +86,7 @@ export default function Research() {
         </section>
 
         {/* Key Findings */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-inherit">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold mb-12 text-center">Key Findings</h2>
 
@@ -111,7 +111,7 @@ export default function Research() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-6 rounded-lg shadow-lg text-center"
+                  className="bg-white p-6 rounded-lg shadow-lg text-center dark:bg-slate-800"
                 >
                   <div className="text-4xl font-bold text-primary-600 mb-3">{item.stat}</div>
                   <p className="text-gray-700">{item.desc}</p>

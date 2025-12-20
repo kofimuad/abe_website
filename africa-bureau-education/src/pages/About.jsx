@@ -15,7 +15,7 @@ export default function About() {
         {/* Header */}
         <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <h1 className="text-5xl font-bold mb-4">About Us</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white">About Us</h1>
             <p className="text-xl text-gray-300">
               Transforming education in Africa through innovative, career-focused curricula
             </p>
@@ -23,7 +23,7 @@ export default function About() {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-inherit">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12">
               <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
@@ -72,7 +72,7 @@ export default function About() {
         </section>
 
         {/* Timeline */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-inherit">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12">Our Journey</h2>
             <div className="space-y-6">

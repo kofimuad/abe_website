@@ -36,13 +36,13 @@ export default function CoursePage() {
             <Link to="/courses" className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
               <ArrowLeft size={20} /> Back to Courses
             </Link>
-            <h1 className="text-5xl font-bold mb-2">{course.name}</h1>
+            <h1 className="text-5xl font-bold mb-2 text-white">{course.name}</h1>
             <p className="text-xl text-gray-300">{course.abstract}</p>
           </div>
         </section>
 
         {/* Course Details */}
-        <section className="py-20">
+        <section className="py-20 dark:bg-stone-800">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-12">
               {/* Main Content */}
@@ -51,7 +51,7 @@ export default function CoursePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="bg-white rounded-lg shadow-lg p-8 mb-8"
+                  className="bg-white rounded-lg shadow-lg p-8 mb-8 dark:bg-slate-800"
                 >
                   <h2 className="text-3xl font-bold mb-4">Course Overview</h2>
                   <p className="text-gray-700 leading-relaxed mb-6">{course.description}</p>
@@ -86,7 +86,7 @@ export default function CoursePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="bg-white rounded-lg shadow-lg p-8"
+                  className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8"
                 >
                   <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
                     <Briefcase size={28} className="text-primary-600" />
@@ -100,14 +100,14 @@ export default function CoursePage() {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3, delay: index * 0.05 }}
-                        className="bg-primary-50 p-4 rounded border-l-4 border-primary-600"
+                        className="bg-primary-50 dark:bg-stone-600 p-4 rounded border-l-4 border-primary-600"
                       >
                         <p className="font-semibold text-gray-900">{career}</p>
                       </motion.div>
                     ))}
                   </div>
 
-                  <div className="mt-6 p-4 bg-primary-100 rounded-lg">
+                  <div className="mt-6 p-4 bg-primary-100 rounded-lg dark:bg-stone-600">
                     <p className="text-sm text-gray-700">
                       <strong>Career Requirements:</strong> {course.careerRequirements}
                     </p>
@@ -121,7 +121,7 @@ export default function CoursePage() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="bg-white rounded-lg shadow-lg p-6 sticky top-24"
+                  className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 sticky top-24"
                 >
                   <h3 className="text-xl font-bold mb-4">Course Information</h3>
 
@@ -145,7 +145,7 @@ export default function CoursePage() {
                       <p className="text-sm text-gray-600 mb-2">Next Steps</p>
                       <Link
                         to="/contact"
-                        className="w-full bg-primary-600 hover:bg-primary-700 text-white py-2 rounded-lg font-semibold text-center block transition"
+                        className="w-full dark:text-white bg-primary-600 hover:bg-primary-700 text-white py-2 rounded-lg font-semibold text-center block transition"
                       >
                         Learn More
                       </Link>

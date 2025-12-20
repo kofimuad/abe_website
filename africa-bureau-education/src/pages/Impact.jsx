@@ -24,7 +24,7 @@ export default function Impact() {
         {/* Header */}
         <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <h1 className="text-5xl font-bold mb-4">Impact & Evidence</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white">Impact & Evidence</h1>
             <p className="text-xl text-gray-300">
               Measuring the effectiveness of education reform
             </p>
@@ -58,7 +58,7 @@ export default function Impact() {
         </section>
 
         {/* Impact Stories */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-inherit">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold mb-12 text-center">Success Stories</h2>
 
@@ -85,10 +85,10 @@ export default function Impact() {
                   viewport={{ once: true }}
                   className={`${story.bg} p-8 rounded-lg border-l-4 border-primary-600`}
                 >
-                  <p className="text-lg italic mb-4 text-gray-700">"{story.quote}"</p>
+                  <p className="text-lg italic mb-4 dark:text-black text-gray-700">"{story.quote}"</p>
                   <div>
-                    <p className="font-bold text-gray-900">{story.name}</p>
-                    <p className="text-sm text-gray-600">{story.role}</p>
+                    <p className="font-bold text-gray-900 dark:text-black">{story.name}</p>
+                    <p className="text-sm text-gray-600 dark:text-black">{story.role}</p>
                   </div>
                 </motion.div>
               ))}

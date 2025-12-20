@@ -45,7 +45,7 @@ export default function Implementation() {
         {/* Header */}
         <section className="bg-secondary-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <h1 className="text-5xl font-bold mb-4">Implementation Resources</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white">Implementation Resources</h1>
             <p className="text-xl text-gray-300">
               Tools and guides for CCSP adoption in your institution
             </p>
@@ -67,7 +67,7 @@ export default function Implementation() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-primary-600"
+                    className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg border-t-4 border-primary-600"
                   >
                     <IconComponent className="w-12 h-12 text-primary-600 mb-4" />
                     <h3 className="text-xl font-bold mb-4">{rec.title}</h3>
@@ -87,7 +87,7 @@ export default function Implementation() {
         </section>
 
         {/* Resources */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 dark:bg-inherit bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold mb-12 text-center">Download Resources</h2>
 
@@ -120,7 +120,7 @@ export default function Implementation() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col justify-between"
+                  className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col justify-between"
                 >
                   <div>
                     <div className="text-4xl mb-4">{resource.icon}</div>

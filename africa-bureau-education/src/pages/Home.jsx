@@ -44,39 +44,39 @@ export default function Home() {
       <Hero />
 
       {/* Features Section */}
-<section className="py-20 bg-gray-50 dark:bg-gray-900">
-  <div className="max-w-7xl mx-auto px-4">
-    <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-      Why CCSP Matters
-    </h2>
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {features.map((feature, index) => {
-        const IconComponent = feature.icon;
-        return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition"
-          >
-            <IconComponent className="w-12 h-12 text-primary-600 dark:text-primary-400 mb-4" />
-            <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-              {feature.title}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              {feature.description}
-            </p>
-          </motion.div>
-        );
-      })}
-    </div>
-  </div>
-</section>
+      <section className="py-20 bg-gray-50 dark:bg-inherit">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+            Why CCSP Matters
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition"
+                >
+                  <IconComponent className="w-12 h-12 text-primary-600 dark:text-primary-400 mb-4" />
+                  <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
       {/* Statistics Section */}
-      <section className="py-20 bg-dark-gradient text-white">
+      <section className="py-20 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-black">The Challenge</h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -100,7 +100,7 @@ export default function Home() {
       <CourseExplorer />
 
       {/* Call to Action */}
-      <section className="py-20 bg-dark-gradient text-white">
+      <section className="py-20 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4 text-black">Join the Education Revolution</h2>
           <p className="text-xl mb-8 text-black">

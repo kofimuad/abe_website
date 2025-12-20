@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 const logo = new URL('../assets/logo.png', import.meta.url).href;
+const logo2 = new URL('../assets/logo2.png', import.meta.url).href;
 
 export default function Hero() {
   return (

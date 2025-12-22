@@ -66,7 +66,7 @@ export default function CCSP() {
               >
                 <h2 className="text-4xl font-bold mb-6">What is CCSP?</h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  The Common Career Selective Programme (CCSP) is a comprehensive education reform framework that addresses critical gaps in Ghana's education system. By expanding from 7 main courses to 18 major courses, CCSP provides students with diverse career pathways tailored to their abilities and interests.
+                  The Common Career Selective Programme (CCSP) is a comprehensive education reform framework that addresses critical gaps in Africa's education system. By expanding from 7 main courses to 18 major courses, CCSP provides students with diverse career pathways tailored to their abilities and interests.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Each course includes 20-40 specific career options with detailed requirements, ensuring students graduate with clear career direction and actionable skills.
@@ -102,7 +102,7 @@ export default function CCSP() {
                 </div>
                 <div className="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-primary-600">
                   <div className="text-4xl font-bold text-primary-600 mb-2">EFA</div>
-                  <p className="text-gray-700 font-semibold">Education for All</p>
+                  <p className="text-gray-700 font-semibold">Education-for-All</p>
                 </div>
               </motion.div>
             </div>

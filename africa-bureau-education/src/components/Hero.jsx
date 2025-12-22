@@ -23,10 +23,10 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-primary-400">
-              Transform Education in Africa
+              Africa Bureau of Education
             </h1>
             <p className="text-xl text-gray-300 mb-6">
-              The Common Career Selective Programme (CCSP) aligns education with real-world careers, ensuring students graduate with relevant skills and opportunities.
+              The Africa Bureau of Education (ABE) is an amalgamation of non-governmental organizations of participating countries in Africa. ABE’s main goal is to champion a common course of advocating for education reforms, to improve the quality of education of our local and regional education systems of pre-tertiary curricula, pedagogies, and assessment. To promote Education-for-All (EFA), and to advance the Human Capital Index (HCI) of respective countries.
             </p>
 
             <div className="flex gap-4 flex-wrap">

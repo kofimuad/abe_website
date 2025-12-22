@@ -58,13 +58,13 @@ export default function Research() {
 
                     <div>
                       <p className="text-sm text-gray-600">Published</p>
-                      <p className="font-semibold">July 9, 2025 | F1000Research</p>
+                      <p className="font-semibold">October 29, 2025 | F1000Research</p>
                     </div>
 
                     <div>
                       <p className="text-sm text-gray-600">Status</p>
                       <span className="inline-block dark:bg-blue-400 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-                        Peer Reviewed
+                        Pre-Print
                       </span>
                     </div>
                   </div>

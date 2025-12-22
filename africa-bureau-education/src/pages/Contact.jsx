@@ -61,8 +61,8 @@ export default function Contact() {
                     <Mail className="text-primary-600 flex-shrink-0 mt-1" size={24} />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <a href="mailto:afrbureauedu@gmail.com" className="text-primary-600 hover:underline">
-                        afrbureauedu@gmail.com
+                      <a href="mailto:info@africabureauofeducation.org" className="text-primary-600 hover:underline">
+                        info@africabureauofeducation.org
                       </a>
                     </div>
                   </div>
@@ -72,7 +72,7 @@ export default function Contact() {
                     <div>
                       <p className="font-semibold">Phone</p>
                       <a href="tel:+233201465422" className="text-primary-600 hover:underline">
-                        +233 (201) 465-422
+                        +233-(0)-20-146-5422
                       </a>
                     </div>
                   </div>

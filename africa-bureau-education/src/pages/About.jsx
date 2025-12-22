@@ -17,7 +17,7 @@ export default function About() {
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-5xl font-bold mb-4 text-white">About Us</h1>
             <p className="text-xl text-gray-300">
-              Transforming education in Africa through innovative, career-focused curricula
+              Transforming African education through innovative, career-focused curricula that equip students with relevant skills and real-world opportunities.
             </p>
           </div>
         </section>
@@ -27,16 +27,16 @@ export default function About() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12">
               <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
-                <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+                <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  To design and implement education reform that ensures all students have access to quality, career-aligned education that prepares them for meaningful employment and lifelong learning opportunities.
+                  By transforming educational curricula, pedagogies, and assessment in Africa, we create responsive education systems that meet individual student needs and labor market demands, enabling every learner to reach their full potential and drive sustainable development.
                 </p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
-                <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
+                <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  An Africa where education systems are responsive to individual student needs and labor market demands, creating a skilled workforce that drives sustainable development and improves quality of life.
+                  To design and implement education reform across Africa through research, policy development, capacity building, and stakeholder collaboration, ensuring all students access quality, career-aligned education for meaningful employment and lifelong learning.
                 </p>
               </motion.div>
             </div>
@@ -57,8 +57,16 @@ export default function About() {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-lg overflow-hidden"
                 >
-                  <div className="h-64 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-4xl">
-                    {member.initials}
+                  {/* Image Section */}
+                  <div className="h-64 bg-gray-200 overflow-hidden relative">
+                    <img
+                      src={`/src/assets/${member.image || 'team-placeholder.jpg'}`}
+                      alt={member.name}
+                      className="w-full h-full object-cover hover:scale-110 transition duration-300"
+                      onError={(e) => {
+                        e.target.src = `https://ui-avatars.com/api/?name=${member.name}&background=22c55e&color=fff&size=256`;
+                      }}
+                    />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-1">{member.name}</h3>
@@ -77,7 +85,7 @@ export default function About() {
             <h2 className="text-4xl font-bold text-center mb-12">Our Journey</h2>
             <div className="space-y-6">
               {[
-                { year: '2019', title: 'Foundation', desc: 'ABE established to address education reform' },
+                { year: '2014', title: 'Foundation', desc: 'ABE established to address education reform' },
                 { year: '2020-2021', title: 'Research', desc: 'Conducted comprehensive study on Ghana education system' },
                 { year: '2022', title: 'CCSP Development', desc: 'Designed Common Career Selective Programme' },
                 { year: '2023-2024', title: 'Publication', desc: 'Published peer-reviewed research findings' },

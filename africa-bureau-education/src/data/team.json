@@ -3,36 +3,27 @@
     "name": "Frederick Agyemang",
     "role": "Executive Director & Lead Researcher",
     "bio": "Frederick leads the Africa Bureau of Education with expertise in education policy and curriculum development. He is the principal investigator of the CCSP research.",
+    "image": "frederick_agyemang.png",
     "initials": "FA"
   },
   {
     "name": "Bismark Agyei",
-    "role": "Secretary, Tech Lead",
+    "role": "Secretary & Tech Lead",
     "bio": "Bismark manages the technical aspects of the CCSP project and oversees administrative functions within the bureau.",
+    "image": "bismark_agyei.jpg",
     "initials": "BA"
   },
   {
-    "name": "Benedicta Woode",
-    "role": "Project Manager",
-    "bio": "Benedicta oversees implementation of CCSP across institutions and manages stakeholder coordination.",
-    "initials": "BW"
-  },
-  {
-    "name": "Samuel Kofi Fosuhene",
-    "role": "Curriculum Specialist",
-    "bio": "Samuel specializes in curriculum design and educational standards with focus on career-aligned learning.",
-    "initials": "SK"
-  },
-  {
-    "name": "Nana Ama Browne Klutse",
-    "role": "Research Advisor",
-    "bio": "Nana provides oversight on research methodologies and ensures academic rigor of all publications.",
-    "initials": "NK"
+    "name": "Nana Serwaa Agyemang",
+    "role": "Education Policy Advisor",
+    "bio": "Nana advises on policy integration and works with government agencies on CCSP adoption.",
+    "image": "nana_serwaa.jpeg",
+    "initials": "NSA"
   },
   {
     "name": "Alexander Kojo Nyarko",
-    "role": "Education Policy Advisor",
-    "bio": "Alexander advises on policy integration and works with government agencies on CCSP adoption.",
+    "role": "Research Advisor",
+    "bio": "Alexander provides oversight on research methodologies and ensures academic rigor of all publications.",
     "initials": "AN"
   },
   {

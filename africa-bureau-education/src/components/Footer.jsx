@@ -43,8 +43,8 @@ export default function Footer() {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center gap-2">
                 <Mail size={18} />
-                <a href="mailto:afrbureauedu@gmail.com" className="hover:text-white transition">
-                  afrbureauedu@gmail.com
+                <a href="mailto:info@africabureauofeducation.org" className="hover:text-white transition">
+                  info@africabureauofeducation.org
                 </a>
               </div>
               <div className="flex items-center gap-2">

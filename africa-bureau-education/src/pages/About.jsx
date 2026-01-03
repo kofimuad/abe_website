@@ -15,12 +15,6 @@ export default function About() {
     }
   };
 
-  // Fallback to avatar if image doesn't exist
-  const getTeamImage = (member) => {
-    const imagePath = getImagePath(member.image);
-    return imagePath || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=22c55e&color=fff&size=256`;
-  };
-
   return (
     <>
       <Helmet>
@@ -75,14 +69,14 @@ export default function About() {
                   className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
                 >
                   {/* Image Section - with fallback */}
-                  <div className="h-64 bg-gradient-to-br from-primary-400 to-primary-600 overflow-hidden relative">
+                  <div className="h-64 bg-gradient-to-br from-primary-400 to-primary-600 overflow-hidden relative flex items-center justify-center">
                     <img
-                      src={getTeamImage(member)}
+                      src={getImagePath(member.image) || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=22c55e&color=fff&size=256&bold=true`}
                       alt={member.name}
                       className="w-full h-full object-cover hover:scale-110 transition duration-300"
                       loading="lazy"
                       onError={(e) => {
-                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=22c55e&color=fff&size=256`;
+                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=22c55e&color=fff&size=256&bold=true`;
                       }}
                     />
                   </div>

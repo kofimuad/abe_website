@@ -3,16 +3,23 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import teamData from '../data/team.json';
 
+// Import all team images explicitly
+import frederickImg from '../assets/frederick_agyemang.png';
+import bismarkImg from '../assets/bismark_agyei.jpg';
+import nanaImg from '../assets/nana_serwaa.jpeg';
+
+// Map image names to imported images
+const teamImages = {
+  'frederick_agyemang.png': frederickImg,
+  'bismark_agyei.jpg': bismarkImg,
+  'nana_serwaa.jpeg': nanaImg,
+};
+
 export default function About() {
-  // Function to get correct image path
-  const getImagePath = (imageName) => {
-    if (!imageName) return null;
-    // Use dynamic import for images
-    try {
-      return new URL(`../assets/${imageName}`, import.meta.url).href;
-    } catch {
-      return null;
-    }
+  // Function to get image
+  const getTeamImage = (member) => {
+    const imagePath = teamImages[member.image];
+    return imagePath || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=22c55e&color=fff&size=256&bold=true`;
   };
 
   return (
@@ -66,17 +73,17 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition"
                 >
-                  {/* Image Section - with fallback */}
-                  <div className="h-64 bg-gradient-to-br from-primary-400 to-primary-600 overflow-hidden relative flex items-center justify-center">
+                  {/* Image Section */}
+                  <div className="h-64 bg-gradient-to-br from-primary-400 to-primary-600 overflow-hidden relative">
                     <img
-                      src={getImagePath(member.image) || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=22c55e&color=fff&size=256&bold=true`}
+                      src={getTeamImage(member)}
                       alt={member.name}
                       className="w-full h-full object-cover hover:scale-110 transition duration-300"
                       loading="lazy"
                       onError={(e) => {
-                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=22c55e&color=fff&size=256&bold=true`;
+                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=22c55e&color=fff&size=256`;
                       }}
                     />
                   </div>

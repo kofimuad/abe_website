@@ -4,6 +4,23 @@ import { motion } from 'framer-motion';
 import teamData from '../data/team.json';
 
 export default function About() {
+  // Function to get correct image path
+  const getImagePath = (imageName) => {
+    if (!imageName) return null;
+    // Use dynamic import for images
+    try {
+      return new URL(`../assets/${imageName}`, import.meta.url).href;
+    } catch {
+      return null;
+    }
+  };
+
+  // Fallback to avatar if image doesn't exist
+  const getTeamImage = (member) => {
+    const imagePath = getImagePath(member.image);
+    return imagePath || `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=22c55e&color=fff&size=256`;
+  };
+
   return (
     <>
       <Helmet>
@@ -28,14 +45,14 @@ export default function About() {
             <div className="grid md:grid-cols-2 gap-12">
               <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
                 <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                   By transforming educational curricula, pedagogies, and assessment in Africa, we create responsive education systems that meet individual student needs and labor market demands, enabling every learner to reach their full potential and drive sustainable development.
                 </p>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
                 <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                   To design and implement education reform across Africa through research, policy development, capacity building, and stakeholder collaboration, ensuring all students access quality, career-aligned education for meaningful employment and lifelong learning.
                 </p>
               </motion.div>
@@ -55,23 +72,24 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden"
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
                 >
-                  {/* Image Section */}
-                  <div className="h-64 bg-gray-200 overflow-hidden relative">
+                  {/* Image Section - with fallback */}
+                  <div className="h-64 bg-gradient-to-br from-primary-400 to-primary-600 overflow-hidden relative">
                     <img
-                      src={`/src/assets/${member.image || 'team-placeholder.jpg'}`}
+                      src={getTeamImage(member)}
                       alt={member.name}
                       className="w-full h-full object-cover hover:scale-110 transition duration-300"
+                      loading="lazy"
                       onError={(e) => {
-                        e.target.src = `https://ui-avatars.com/api/?name=${member.name}&background=22c55e&color=fff&size=256`;
+                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=22c55e&color=fff&size=256`;
                       }}
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                    <p className="text-primary-600 font-semibold mb-3">{member.role}</p>
-                    <p className="text-gray-600 text-sm">{member.bio}</p>
+                    <h3 className="text-xl font-bold mb-1 dark:text-white">{member.name}</h3>
+                    <p className="text-primary-600 dark:text-primary-400 font-semibold mb-3">{member.role}</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">{member.bio}</p>
                   </div>
                 </motion.div>
               ))}
@@ -101,8 +119,8 @@ export default function About() {
                 >
                   <div className="w-32 font-bold text-primary-600 text-lg">{item.year}</div>
                   <div className="flex-1 pb-6 border-l-2 border-primary-600 pl-6">
-                    <h3 className="text-xl font-bold mb-1">{item.title}</h3>
-                    <p className="text-gray-600">{item.desc}</p>
+                    <h3 className="text-xl font-bold mb-1 dark:text-white">{item.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
